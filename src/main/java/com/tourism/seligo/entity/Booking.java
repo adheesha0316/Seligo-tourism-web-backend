@@ -42,5 +42,5 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "cabId")
-    private Vehicle vehicle;
+    private Driver vehicle;
 }

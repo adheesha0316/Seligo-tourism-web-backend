@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class VehicleDto {
-    private Integer cabId;
+public class DriverDto {
+    private Integer driverId;
     private String vehicleType;
     private String plateNumber;
     private double pricePerKm;

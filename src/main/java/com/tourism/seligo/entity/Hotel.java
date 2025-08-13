@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -19,6 +21,9 @@ public class Hotel {
     private double pricePerNight;
     private String contactNumber;
     private int stars;
+
+    @Column(name = "profileImage")
+    private String profileImage;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     private List<Booking> bookings;

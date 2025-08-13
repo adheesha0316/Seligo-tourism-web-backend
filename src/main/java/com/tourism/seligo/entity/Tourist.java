@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -19,6 +21,9 @@ public class Tourist {
     private String phone;
     private String nationality;
     private String passportNumber;
+
+    @Column(name = "profileImage")
+    private String profileImage;
 
     @OneToMany(mappedBy = "tourist", cascade = CascadeType.ALL)
     private List<Booking> bookings;

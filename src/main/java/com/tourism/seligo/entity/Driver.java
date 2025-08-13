@@ -11,16 +11,19 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Vehicle {
+public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer cabId;
+    private Integer driverId;
 
     private String vehicleType; // car, van, bus
     private String plateNumber;
     private double pricePerKm;
     private int seatCount;
     private boolean available;
+
+    @Column(name = "profileImage")
+    private String profileImage;
 
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
     private List<Booking> bookings;
