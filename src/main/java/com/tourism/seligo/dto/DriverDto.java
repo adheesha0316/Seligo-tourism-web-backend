@@ -1,5 +1,6 @@
 package com.tourism.seligo.dto;
 
+import com.tourism.seligo.enums.AvailabilityStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ public class DriverDto {
     private String plateNumber;
     private double pricePerKm;
     private int seatCount;
-    private boolean available;
+    private AvailabilityStatus availability; // Enum instead of boolean
     private String contactNumber;
     private String profileImage; // Path or URL to profile picture
 }
