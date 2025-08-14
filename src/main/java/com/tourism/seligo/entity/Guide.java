@@ -17,10 +17,11 @@ public class Guide {
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    private User user; // Base user: name, email, phone, password, role
+    private User user; // Base user: name, email, password, role
 
     private String language;
     private double ratePerDay;
+    private String contactNumber;
     private boolean available;
 
     @Column(name = "profile_image")

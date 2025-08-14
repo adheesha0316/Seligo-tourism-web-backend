@@ -12,7 +12,7 @@ public class TouristDto {
     private Integer userId; // Linked User ID
     private String name;
     private String email;
-    private String phone;
+    private String phoneNumber;
     private String nationality;
     private String passportNumber;
     private String profileImage; // Path or URL to profile picture

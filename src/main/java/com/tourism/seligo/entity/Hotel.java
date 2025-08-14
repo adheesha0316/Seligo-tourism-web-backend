@@ -17,11 +17,12 @@ public class Hotel {
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    private User user; // Base user details: name, email, phone, password, role
+    private User user; // Base user details: name, email, password, role
 
     private String hotelName;
     private String location;
     private double pricePerNight;
+    private String contactNumber;
     private int stars;
 
     @Column(name = "profile_image")

@@ -1,5 +1,6 @@
 package com.tourism.seligo.entity;
 
+import com.tourism.seligo.enums.AvailabilityStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,19 +12,23 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Driver {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer driverId;
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    private User user; // Base user info: name, email, phone, password, role
+    private User user; // Base user info: name, email, password, role
 
     private String vehicleType; // car, van, bus
     private String plateNumber;
     private double pricePerKm;
     private int seatCount;
-    private boolean available;
+    private String contactNumber;
+
+    @Enumerated(EnumType.STRING)
+    private AvailabilityStatus availability; // Enum instead of boolean
 
     @Column(name = "profile_image")
     private String profileImage;

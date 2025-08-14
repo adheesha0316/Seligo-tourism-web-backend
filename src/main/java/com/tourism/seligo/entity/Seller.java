@@ -16,9 +16,10 @@ public class Seller {
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    private User user; // Base user: name, email, phone, password, role
+    private User user; // Base user: name, email, password, role
 
     private String address;
+    private String phoneNumber;
 
     @Column(name = "profile_image")
     private String profileImage;

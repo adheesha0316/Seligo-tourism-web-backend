@@ -15,5 +15,6 @@ public class DriverDto {
     private double pricePerKm;
     private int seatCount;
     private boolean available;
+    private String contactNumber;
     private String profileImage; // Path or URL to profile picture
 }
