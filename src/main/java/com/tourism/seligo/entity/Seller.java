@@ -4,27 +4,25 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Tourist {
+@AllArgsConstructor
+public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer touristId;
+    private Integer sellerId;
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    private User user; // linked base user with name, email, phone, password, role
+    private User user; // Base user: name, email, phone, password, role
 
-    private String nationality;
-    private String passportNumber;
+    private String address;
 
     @Column(name = "profile_image")
     private String profileImage;
 
-    @OneToMany(mappedBy = "tourist", cascade = CascadeType.ALL)
-    private List<Booking> bookings;
+    private String businessName;
+    private String description; // optional seller description
 }

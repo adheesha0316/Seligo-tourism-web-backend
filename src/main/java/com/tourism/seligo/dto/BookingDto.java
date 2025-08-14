@@ -1,5 +1,6 @@
 package com.tourism.seligo.dto;
 
+import com.tourism.seligo.enums.BookingStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +16,10 @@ public class BookingDto {
     private Date startDate;
     private Date endDate;
     private double totalPrice;
-    private String status;
+    private BookingStatus status; // Enum instead of String
 
     private Integer touristId;
     private Integer guideId;
     private Integer hotelId;
-    private Integer cabId;
+    private Integer driverId; // Renamed from cabId to match Driver entity
 }

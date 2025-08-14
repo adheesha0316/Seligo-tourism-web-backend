@@ -9,9 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class HotelDto {
     private Integer hotelId;
+    private Integer userId; // Linked User ID
     private String hotelName;
     private String location;
     private double pricePerNight;
     private String contactNumber;
     private int stars;
+    private String profileImage; // Path or URL to profile picture
 }

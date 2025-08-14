@@ -1,10 +1,10 @@
 package com.tourism.seligo.entity;
 
+import com.tourism.seligo.enums.BookingStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Date;
 
 @Entity
@@ -26,21 +26,23 @@ public class Booking {
     private Date endDate;
 
     private double totalPrice;
-    private String status; // CONFIRMED, CANCELLED, COMPLETED
+
+    @Enumerated(EnumType.STRING)
+    private BookingStatus status; // Enum instead of String
 
     @ManyToOne
-    @JoinColumn(name = "touristId")
+    @JoinColumn(name = "tourist_id")
     private Tourist tourist;
 
     @ManyToOne
-    @JoinColumn(name = "guideId")
+    @JoinColumn(name = "guide_id")
     private Guide guide;
 
     @ManyToOne
-    @JoinColumn(name = "hotelId")
+    @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
     @ManyToOne
-    @JoinColumn(name = "cabId")
-    private Driver vehicle;
+    @JoinColumn(name = "driver_id")
+    private Driver driver;
 }

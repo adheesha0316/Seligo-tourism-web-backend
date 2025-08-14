@@ -9,9 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DriverDto {
     private Integer driverId;
-    private String vehicleType;
+    private Integer userId; // Linked User ID
+    private String vehicleType; // Car, Van, Bus, etc.
     private String plateNumber;
     private double pricePerKm;
     private int seatCount;
     private boolean available;
+    private String profileImage; // Path or URL to profile picture
 }

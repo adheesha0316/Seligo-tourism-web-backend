@@ -9,9 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class GuideDto {
     private Integer guideId;
+    private Integer userId; // Linked User ID
     private String name;
     private String language;
     private double ratePerDay;
     private String contactNumber;
     private boolean available;
+    private String profileImage; // Path or URL to profile picture
 }

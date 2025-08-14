@@ -7,11 +7,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TouristDtO {
+public class TouristDto {
     private Integer touristId;
+    private Integer userId; // Linked User ID
     private String name;
     private String email;
     private String phone;
     private String nationality;
     private String passportNumber;
+    private String profileImage; // Path or URL to profile picture
 }
