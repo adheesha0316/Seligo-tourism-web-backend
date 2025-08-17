@@ -14,6 +14,7 @@ public class GuideDto {
     private String language;
     private double ratePerDay;
     private String contactNumber;
+    private String nic;
     private boolean available;
     private String profileImage; // Path or URL to profile picture
 }

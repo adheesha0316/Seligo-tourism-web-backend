@@ -22,6 +22,7 @@ public class Guide {
     private String language;
     private double ratePerDay;
     private String contactNumber;
+    private String nic;
     private boolean available;
 
     @Column(name = "profile_image")
