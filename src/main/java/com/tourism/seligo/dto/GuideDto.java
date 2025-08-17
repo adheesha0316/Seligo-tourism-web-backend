@@ -17,4 +17,5 @@ public class GuideDto {
     private String nic;
     private boolean available;
     private String profileImage; // Path or URL to profile picture
+    private String licenseImage; // Path or URL to nic picture
 }

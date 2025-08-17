@@ -16,4 +16,6 @@ public class TouristDto {
     private String nationality;
     private String passportNumber;
     private String profileImage; // Path or URL to profile picture
+    private String passportImage; // Path or URL to passport picture
+
 }

@@ -18,4 +18,5 @@ public class DriverDto {
     private AvailabilityStatus availability; // Enum instead of boolean
     private String contactNumber;
     private String profileImage; // Path or URL to profile picture
+    private String licenseImage; // path or URL to license picture
 }

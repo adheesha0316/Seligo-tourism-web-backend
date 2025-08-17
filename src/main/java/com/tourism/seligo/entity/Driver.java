@@ -33,6 +33,9 @@ public class Driver {
     @Column(name = "profile_image")
     private String profileImage;
 
+    @Column(name = "license_image")
+    private String licenseImage;
+
     @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
     private List<Booking> bookings;
 }

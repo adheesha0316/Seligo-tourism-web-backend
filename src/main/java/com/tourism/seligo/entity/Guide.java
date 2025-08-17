@@ -28,6 +28,9 @@ public class Guide {
     @Column(name = "profile_image")
     private String profileImage;
 
+    @Column(name = "nic_image")
+    private String nicImage;
+
     @OneToMany(mappedBy = "guide", cascade = CascadeType.ALL)
     private List<Booking> bookings;
 }

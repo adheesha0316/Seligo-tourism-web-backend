@@ -26,6 +26,9 @@ public class Tourist {
     @Column(name = "profile_image")
     private String profileImage;
 
+    @Column(name = "passport_image")
+    private String passportImage;
+
     @OneToMany(mappedBy = "tourist", cascade = CascadeType.ALL)
     private List<Booking> bookings;
 }
